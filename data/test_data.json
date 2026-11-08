@@ -1,0 +1,35 @@
+{
+  "users": {
+    "student": {"username": "student1", "password": "Password123!", "display_name": "Alice Student"},
+    "student_two": {"username": "student2", "password": "Password456!", "display_name": "Bob Student"},
+    "locked": {"username": "locked_user", "password": "Password123!"}
+  },
+  "invalid_logins": [
+    {"id": "wrong_password", "username": "student1", "password": "WrongPass!", "error": "Invalid username or password."},
+    {"id": "unknown_user", "username": "no_such_user", "password": "Password123!", "error": "Invalid username or password."},
+    {"id": "sql_injection_string", "username": "' OR '1'='1", "password": "' OR '1'='1", "error": "Invalid username or password."}
+  ],
+  "empty_logins": [
+    {"id": "empty_username", "username": "", "password": "Password123!"},
+    {"id": "empty_password", "username": "student1", "password": ""},
+    {"id": "both_empty", "username": "", "password": ""}
+  ],
+  "courses": {
+    "python": {"id": "C101", "title": "Introduction to Python"},
+    "testing": {"id": "C102", "title": "Software Testing Fundamentals"},
+    "full": {"id": "C103", "title": "Web Automation with Playwright"}
+  },
+  "assignments": {
+    "python_basics": {"id": "A101", "course_id": "C101", "title": "Python Basics Exercise"},
+    "test_plan": {"id": "A102", "course_id": "C102", "title": "Write a Test Plan"},
+    "past_due": {"id": "A103", "course_id": "C101", "title": "Legacy Assignment (closed)"}
+  },
+  "submission_text": "This is my answer for the assignment.",
+  "errors": {
+    "empty_submission": "Submission cannot be empty",
+    "bad_file_type": "File type not allowed",
+    "file_too_large": "File is too large",
+    "past_due": "Assignment is past due"
+  },
+  "max_upload_bytes": 1048576
+}
